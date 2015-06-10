@@ -47,6 +47,7 @@ html
 {
 	widht:120px;
 	height:120px;
+	margin-left:560px;
 }
 
 #background_image
@@ -88,7 +89,7 @@ html
 {
 	font-family:Quicksand;
 	text-align: center;
-	color: #23b48c;
+	color: #de2c25;
 	font-size:32px;
 }
 

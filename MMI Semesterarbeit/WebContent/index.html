@@ -7,9 +7,12 @@
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quicksand">
 
 
+
 <title>Yellow Bird</title>
 </head>
 <body>
+
+
 
 	<div class="header">
 		<a id="menu" href="" class="menu_icon"><img id="menu_icon_img" src="icon/menu icon.png"></a>
@@ -51,9 +54,9 @@
 		<p>
 			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 		</p><br><br>
-			<center>
-			<img id="nav_icon" src="icon/navigation-icon.png">
-			</center>
+			
+			<img id="nav_icon" src="icon/marker-red.png">
+			
 		<h2>
 			Lets get closer to our animal protection project!
 		</h2>
@@ -66,58 +69,122 @@
 		</p><br><br>
 
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
-	<!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    
-    <script>
-    	function initialize(){
-    		var mapCanvas = document.getElementById('map-canvas');
-    		var myLatlng = new google.maps.LatLng(20.220085, 23.444550);
-    		var mapOptions = {
-    				zoom: 2,
-    			    center: myLatlng,
-    			    mapTypeId: google.maps.MapTypeId.ROADMAP
-    			   }
-    		var map = new google.maps.Map(mapCanvas, mapOptions);
-    		
-    		 var contentString = '<div id="content">'+
-    	      '<div id="siteNotice">'+
-    	      '</div>'+
-    	      '<h1 id="firstHeading" class="firstHeading" style="font-family:Roboto Condensed;text-align:center">Indonesia</h1>'+
-    	      '<div id="bodyContent">'+
-    	      '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,' + 
-    	      'when an unknown printer took a galley of type and scrambled it to make a type specimen book.' +
-    	      'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>'+
-    	      '</div>'+
-    	      '</div>';
-    	      
-    	      var infowindow = new google.maps.InfoWindow({
-    	    	  content: contentString
-    	      });
-    	     
-    	      var image = {
-    	    		  url:'icon/marker.png',
-    	    		  size : new google.maps.Size(20,20),
-    	    		  origin: new google.maps.Point(0,0),
-    	    		  anchor: new google.maps.Point(0,32)
-    	      };
-    	      
-    	
-    	      
-				var marker = new google.maps.Marker({
-      			position: new google.maps.LatLng(-1.231313, 113.752168),
-      			map: map,
-      			title : "Indonesia"
-      		});
-    	      
-    	      google.maps.event.addListener(marker,'click',function() {
-    	    	  infowindow.open(map,marker);
-    	    });
-    	}
-    	google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-    
-    <script>
+   	
+   	<script>
+   	
+   	function initialize(){
+		
+   		var mapCanvas = document.getElementById('map-canvas');
+		
+		var myLatlng = new google.maps.LatLng(20.220085, 23.444550);
+		
+		var mapOptions = {
+				zoom: 2,
+			    center: myLatlng,
+			    mapTypeId: google.maps.MapTypeId.ROADMAP
+		}
+		
+		var map = new google.maps.Map(mapCanvas, mapOptions);
+		
+		 var contentString = '<div id="content">'+
+	      '<div id="siteNotice">'+
+	      '</div>'+
+	      '<h1 id="firstHeading" class="firstHeading" style="font-family:Roboto Condensed;text-align:center">Indonesia</h1>'+
+	      '<div id="bodyContent">'+
+	      '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,' + 
+	      'when an unknown printer took a galley of type and scrambled it to make a type specimen book.' +
+	      'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>'+
+	      '</div>'+
+	      '</div>';
+	      
+	      var infowindow = new google.maps.InfoWindow({
+	    	  content: contentString
+	      });
+	     
+	      var projekt = [
+	      ['Germany',51.487740, 10.234393],               
+	      ['Indonesia',-1.231313, 113.752168],
+	      ['Malaysia',4.841596, 101.861801],   
+	      ['Japan',36.817099, 139.473346],   
+	      ['China',34.639152, 100.796268],   
+	      ['Greece',37.877127, 23.810272],   
+	      ['India',19.648253, 78.340747],   
+	      ['Cameroon',7.042666, 13.399273],   
+	      ['Canada',56.098171, -109.007812],   
+	      ];
+	      
+	     var image = {
+	    	url:'icon/marker-red-map.png',
+	     };
+	     
+	    var marker1 = getMarker(0,map,image,projekt);
+	 	google.maps.event.addListener(marker1,'click',function() {
+	 	   	  infowindow.open(map,marker1);
+	 	});
+	 	
+	 	var marker2 = getMarker(1,map,image,projekt);
+	 	google.maps.event.addListener(marker2,'click',function() {
+	 	   	  infowindow.open(map,marker2);
+	 	});
+	 	
+		var marker3 = getMarker(2,map,image,projekt);
+	 	google.maps.event.addListener(marker3,'click',function() {
+	 	   	  infowindow.open(map,marker3);
+	 	});
+	 	
+		var marker4 = getMarker(3,map,image,projekt);
+	 	google.maps.event.addListener(marker4,'click',function() {
+	 	   	  infowindow.open(map,marker4);
+	 	});
+	 	
+		var marker5 = getMarker(4,map,image,projekt);
+	 	google.maps.event.addListener(marker5,'click',function() {
+	 	   	  infowindow.open(map,marker5);
+	 	});
+	 	
+		var marker6 = getMarker(5,map,image,projekt);
+	 	google.maps.event.addListener(marker6,'click',function() {
+	 	   	  infowindow.open(map,marker6);
+	 	});
+	 	
+		var marker7 = getMarker(6,map,image,projekt);
+	 	google.maps.event.addListener(marker7,'click',function() {
+	 	   	  infowindow.open(map,marker7);
+	 	});
+	 	
+		var marker8 = getMarker(7,map,image,projekt);
+	 	google.maps.event.addListener(marker8,'click',function() {
+	 	   	  infowindow.open(map,marker8);
+	 	});
+	 	
+		var marker9 = getMarker(8,map,image,projekt);
+	 	google.maps.event.addListener(marker9,'click',function() {
+	 	   	  infowindow.open(map,marker9);
+	 	});
+	    
+	}
+   	
+   	function getMarker(index,map,image,projekt) {
+   		var marker = new google.maps.Marker({
+      		position: new google.maps.LatLng(projekt[index][1],projekt[index][2]),
+      		map: map,
+      		icon: image,
+      		title : projekt[index][0]
+     });
+     	
+ 		return marker;	
+   	}
+   	
+   	function addEvent(marker) {
+  
+   	}
+   	
+   	
+  	google.maps.event.addDomListener(window, 'load', initialize);
+   	</script>
+   	
+   	<script>
     (function() {
      var body = $('body');
      $('.menu_icon').bind('click', function() {
