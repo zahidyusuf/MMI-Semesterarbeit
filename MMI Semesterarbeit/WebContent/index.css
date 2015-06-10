@@ -2,7 +2,8 @@
 html
 {
 	width: 1280px;
-	height: 1024px;
+	heigt:2400px;
+	margin: 0 auto;	
 }
 
 .header
@@ -42,6 +43,12 @@ html
 	float: right;
 }
 
+#nav_icon
+{
+	widht:120px;
+	height:120px;
+}
+
 #background_image
 {
 	width: 1280px;
@@ -77,6 +84,13 @@ html
 	font-family: Roboto Condensed;
 	text-align: center;
 }
+.content h2
+{
+	font-family:Quicksand;
+	text-align: center;
+	color: #23b48c;
+	font-size:32px;
+}
 
 p
 {
@@ -101,7 +115,8 @@ a#menu
 }
 
 a#side
-{
+{	
+
     text-decoration:none;
     color:grey;
     font-weight: bold;
@@ -112,7 +127,7 @@ a#side_login
 {	
 
     text-decoration:none;
-    color:black;
+    color:grey;
     font-weight: bold;
     
 }
@@ -142,7 +157,7 @@ a#side:hover,#side_login:hover
 
 .menu-side
 {
-    background : linear-gradient(to bottom,#66CDAA 0%,#66CDAA 18%,#333 18%,#333 100%);
+   	background : #333;
     border-right:1px solid #000;
     color:#fff;
     position: fixed;
@@ -154,5 +169,10 @@ a#side:hover,#side_login:hover
     
 }
 
+#map-canvas
+{
+	width: 1265px;
+	height: 550px;
+}
 
 
