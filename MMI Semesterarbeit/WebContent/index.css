@@ -3,7 +3,7 @@ html
 {
 	width: 1280px;
 	heigt:2400px;
-	margin: 0 auto;	
+	margin:0 auto;
 }
 
 .header
@@ -138,9 +138,16 @@ a#side:hover,#side_login:hover
   color:white;
 }
 
+.menu
+{
+    overflow-x:hidden;
+    position:relative;
+    left:0;
+}
+
 .menu-open
 {
-    left:231px;
+    left:250px;
 }
 
 .menu-open .menu-side
@@ -159,12 +166,11 @@ a#side:hover,#side_login:hover
 .menu-side
 {
    	background : #333;
-    border-right:1px solid #000;
     color:#fff;
     position: fixed;
     top:0;
-    left: -231px;
-    width:210px;
+    left: -251px;
+    width:230px;
     height:100%;
     padding:10px;
     
@@ -174,6 +180,36 @@ a#side:hover,#side_login:hover
 {
 	width: 1265px;
 	height: 550px;
+	
 }
 
+#twitter_icon_2
+{
+	margin-bottom:-1px;
+}
+
+#footer
+{
+	background: #DCDCDC;
+	width: 1280px;
+	height:50px;
+	
+}
+
+.socmed
+{	
+	margin-top:300px;
+	text-align:center;
+	font-family: Roboto Condensed;
+	
+	
+}
+
+#rights
+{
+		font-family: Roboto Condensed;
+		text-align:center;
+		padding-top:20px;
+	
+}
 
