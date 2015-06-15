@@ -45,6 +45,7 @@ html
 	Slider
 */
 
+
 #background_image
 {
 	width: 1280px;
@@ -84,8 +85,8 @@ html
 
 #sub_image
 {
-	width:400px;
-	height:267px;
+	width:290px;
+	height:274px;
 	margin-top:100px;
 	float:left;	
 }
@@ -94,6 +95,9 @@ html
 {
 	display:inline-block;
 	vertical-align:top;
+	margin-left:120px;
+	margin-top:60px;
+	
 }
 
 #par_sub_content
@@ -111,6 +115,11 @@ html
 {
 	padding-left:30px;
 	font-size: 22px;
+}
+
+#sub_content a
+{
+	text-decoration:none;
 }
 
 /*
