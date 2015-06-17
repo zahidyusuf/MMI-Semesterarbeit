@@ -3,7 +3,6 @@
 html
 {
 	width: 1280px;
-	heigt:2400px;
 	margin:0 auto;
 }
 
@@ -98,8 +97,6 @@ html
 {
 	font-family: Roboto Condensed;
 	padding-left: 10px;
-
-	
 }
 
 #sub_image
@@ -140,6 +137,39 @@ html
 {
 	text-decoration:none;
 }
+
+/*
+	Content 2
+*/
+
+.content_2 h1
+{
+	margin-top:100px;
+	font-family: Roboto Condensed;
+	padding-left: 10px;
+	
+}
+
+#donate_icon
+{
+	widht:130px;
+	height:41px;
+	padding-left: 10px;
+}
+
+#sign_in_icon
+{
+	widht:130px;
+	height:41px;
+	padding-left: 10px;
+}
+
+a
+{
+	text-decoration:none;
+}
+
+
 
 /*
 	Menu CSS
@@ -226,7 +256,8 @@ body
 #map-canvas
 {
 	width: 1265px;
-	height: 550px;
+	height: 600px;
+	
 }
 
 #map h2
@@ -236,11 +267,40 @@ body
 	color: #de2c25;
 	font-size:32px;
 }
+#map h1
+{
+	font-family:Quicksand;
+	text-align: center;
+	color: #de2c25;
+	font-size:40px;
+}
+
+#map h3
+{
+	font-size:72px;
+	font-family:Quicksand;
+	color: #de2c25;
+	margin-bottom:-20px;
+	padding-left: 10px;
+	
+}
+
+#map h4
+{
+	font-size:20px;
+	font-family:Quicksand;
+	color: #de2c25;
+	margin-bottom:-20px;
+	padding-left: 10px;
+	
+}
 
 #map
 {
-	margin-top:200px;	
+	margin-top :200px;
+
 }
+
 
 /*
 	Social media
