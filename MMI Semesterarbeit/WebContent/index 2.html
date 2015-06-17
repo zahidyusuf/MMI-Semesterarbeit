@@ -134,7 +134,8 @@
 		var mapOptions = {
 				zoom: 2,
 			    center: myLatlng,
-			    mapTypeId: google.maps.MapTypeId.ROADMAP
+			    mapTypeId: google.maps.MapTypeId.TERRAIN,
+			    disableDefaultUI: true
 		}
 		
 		var map = new google.maps.Map(mapCanvas, mapOptions);
