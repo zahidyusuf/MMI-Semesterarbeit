@@ -181,7 +181,8 @@
 				zoom: 2,
 			    center: myLatlng,
 			    mapTypeId: google.maps.MapTypeId.TERRAIN,
-			    disableDefaultUI: true
+			    disableDefaultUI: false,
+			    scrollwheel: false
 		}
 		
 		var map = new google.maps.Map(mapCanvas, mapOptions);
