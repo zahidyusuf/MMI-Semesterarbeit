@@ -14,12 +14,11 @@
 		<a id="menu" href="" class="menu_icon"><img id="menu_icon_img" src="icon/menu icon.png"></a>
 			<nav class="menu-side">
     			<ul>
-			  	<a id="side" href="#"><p>HOME</p></a>
+			  	<a id="side" href="index 2.html"><p>HOME</p></a>
 			  	<a id="side" href="#"><p>DONATE</p></a>
 			  	<a id="side" href="#"><p>OUR PROJECT</p></a>
 			 	<a id="side" href="#"><p>CONTACT US</p></a>
-			  	<a id="side" href="#"><p>HELP</p></a>
-			   	<a id="side" href="#"><p>SETTINGS</p></a>
+			  	<a id="side" href="index-gallery.html"><p>GALLERY</p></a>
 			    </ul>
 			</nav>
     	
@@ -134,7 +133,7 @@
 		and influence people into making sustainable choices and decisions.
 		</p>
 		
-		<a href="#"><img id="donate_icon" src="icon/donate button.png"></a>
+		<a href="#"><img id="donate_icon" src="icon/Donate button.png"></a>
 		
 		<h1>
 			Join us
@@ -142,7 +141,7 @@
 		<p>
 		Stay in touch with updates and getting closer to our project
 		</p>
-		<a href="#"><img id="sign_in_icon" src="icon/sign in button.png"></a>
+		<a href="#"><img id="sign_in_icon" src="icon/Sign in button.png"></a>
 		<p>Not a member yet?<a href="#"> sign up</a> now!</p>
 	
 	
@@ -180,8 +179,9 @@
 		var mapOptions = {
 				zoom: 2,
 			    center: myLatlng,
-			    mapTypeId: google.maps.MapTypeId.TERRAIN,
-			    disableDefaultUI: true
+			    mapTypeId: google.maps.MapTypeId.SATELLITE,
+			    disableDefaultUI: false,
+			    scrollwheel: false
 		}
 		
 		var map = new google.maps.Map(mapCanvas, mapOptions);
