@@ -104,6 +104,38 @@ html
 }
 
 /*
+	Content 2
+*/
+
+.content_2 h1
+{
+	margin-top:100px;
+	font-family: Roboto Condensed;
+	padding-left: 10px;
+	
+}
+
+#donate_icon
+{
+	widht:130px;
+	height:41px;
+	padding-left: 10px;
+}
+
+#sign_in_icon
+{
+	widht:130px;
+	height:41px;
+	padding-left: 10px;
+}
+
+a
+{
+	text-decoration:none;
+}
+
+
+/*
 	Menu CSS
 */
 
@@ -300,21 +332,22 @@ img { border: 0; max-width: 100%; }
   width: 1000px;
   margin: 0 auto;
   padding-top: 30px;
-  margin-left: 150px;
-   margin-top: 150px;
+  margin-left: 85px;
+  margin-top: 130px;
 }
-/*
+
 #content {
   display: block;
   width: 100%;
-  background: #fff;
-  padding: 0px 20px;
+  background: #eff0f0;
+  padding: 40px;
+  padding-left: 60px;
   padding-bottom: 35px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 }
-*/
+
 #thumbnails { display: block; }
 #thumbnails ul li { float: left;}
 
