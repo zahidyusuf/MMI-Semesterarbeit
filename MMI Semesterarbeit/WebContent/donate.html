@@ -7,6 +7,47 @@
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quicksand">
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway">
 	<title>Yellow Bird - Donate</title>
+	<style>
+	.titles{
+	font-size:33px; font-family:Roboto Condensed; margin-left:20px;
+	}
+	.onedonatetable{
+	padding-right:40px;padding-left:40px;padding-top:50px;padding-bottom:50px;text-align:center; vertical-align:middle; line-height:30px;
+	}
+	.blacknumbers{
+	 font-family:Roboto Condensed; font-size:40px;
+	}
+	.orangeeuro{
+	 font-family:Arial; font-size:65px; color:orange;
+	 }
+	 .progtitle{
+	 font-family:Roboto Condensed; font-size:30px;
+	}
+	.progsubtitle1{
+	 font-family:Roboto Condensed; font-size:18px;
+	}
+	.proggreen{
+	 font-family:Roboto Condensed; font-size:12px; color:green;
+	}
+	.progred{
+	 font-family:Roboto Condensed; font-size:16px; color:red; font-weight:bold;
+	}
+	.progstuff{
+	 font-family:Roboto Condensed; font-size:14px; font-weight:bold;
+	}
+	 .button{
+	 font-family:Roboto Condensed; font-size:18px;background:orange; cursor:pointer;padding:5px 25px; border-radius: 5px;
+	 }
+	 .progdonation{
+	 text-align:center;padding-right:45px;padding-left:44px; padding-bottom:20px; 
+	 }
+	 table{
+	 border-color:#dddddd; border-width:1px;
+	 }
+	 table td{
+	 border-color:#dddddd; border-width:1px;
+	 }
+	</style>
 	</head>
 
 	<body>
@@ -14,12 +55,11 @@
 		<a id="menu" href="" class="menu_icon"><img id="menu_icon_img" src="icon/menu icon.png"></a>
 			<nav class="menu-side">
     			<ul>
-			  	<a id="side" href="#"><p>HOME</p></a>
-			  	<a id="side" href="#"><p>DONATE</p></a>
-			  	<a id="side" href="#"><p>OUR PROJECT</p></a>
-			 	<a id="side" href="#"><p>CONTACT US</p></a>
-			  	<a id="side" href="#"><p>HELP</p></a>
-			   	<a id="side" href="#"><p>SETTINGS</p></a>
+			  	<a id="side" href="index 2.html"><p><img src="icon/home.png" style="width:30px;margin-right: 10px;">HOME</p></a>
+			  	<a id="side" href="donate.html"><p><img src="icon/heart.png" style="width:30px;margin-right: 10px;">DONATE</p></a>
+			  	<a id="side" href="ourproject.html"><p><img src="icon/earth.png" style="width:30px;margin-right: 10px;">OUR PROJECT</p></a>
+			  	<a id="side" href="index-gallery.html"><p><img src="icon/gallery.png" style="width:30px;margin-right: 10px;">GALLERY</p></a>
+			  	<a id="side" href="contactus.html"><p><img src="icon/telefonyellow.png" style="width:30px;margin-right: 10px;">CONTACT US</p></a>
 			    </ul>
 			</nav>
     	
@@ -29,7 +69,7 @@
 	<div class="slider">
 			<img id="logo" src="image/logo.png">
 			<h1>
-				Yellow Bird - Donate
+				<img src="icon/heart.png"style="width:52px;height:52px;margin-right: 15px;">Donate
 			</h1>
 			<!-- 
 			<h3>
@@ -43,16 +83,54 @@
 	<div class="content">	
 	<div id="sub_content">
 		<div id="par_sub_content">
-		<table border="0" style="">
-		<tr><td><h1>Choose a country</h1></td></tr>
-		<tr><td> <select>
+		<table border="1" style="border-collapse:collapse;">
+		<tr><td style="border-bottom-style:none;"><text class="titles">Choose a country</text></td></tr>
+		<tr><td style="border-top-style:none;"> <select style="height:30px; font-size:15px;font-family:Roboto Condensed;margin-left:30px;margin-bottom:10px;">
+		<option value="Congo">Congo</option>
  		 <option value="Indonesia">Indonesia</option>
- 		 <option value="Congo">Congo</option>
-  		<option value="mercedes">Mexico</option>
+  		<option value="Mexico">Mexico</option>
 				</select> </td>
-	<tr><td><h1>Make a one-time donation</h1></td></tr>
-	<tr><td><table><tr><td><input type="submit"></td><td><input type="submit"></td><td><input type="submit"></td><td><input type="submit"></td></tr></table></td></tr>
+	<tr><td style="border-bottom-style:none;"><text class="titles">Make a one-time donation</text></td></tr>
+	<tr><td style="border-top-style:none;"><table border="1" style="border-collapse: collapse; margin-left:30px;margin-bottom:10px;margin-right:20px;"><tr>
+	<td class="onedonatetable"><text class="blacknumbers">5 </text><text class="orangeeuro">&euro;</text><br><input class="button" type="submit" value="Choose"></td>
+	<td class="onedonatetable"><text class="blacknumbers">10 </text><text class="orangeeuro">&euro;</text><br><input class="button" type="submit" value="Choose"></td>
+	<td class="onedonatetable"><text class="blacknumbers">50 </text><text class="orangeeuro">&euro;</text><br><input class="button" type="submit" value="Choose"></td>
+	<td class="onedonatetable"><input type="text" value="0" size="9"><text class="orangeeuro">&euro;</text><br><input class="button" type="submit"value="Choose"></td>
+	</tr></table></td></tr>
+	<tr><td style="border-bottom-style:none;"><text class="titles">or choose a program</text></td></tr>
+	<tr>
+	<td style="margin-left:20px;border-top-style:none;">
 	
+	
+	<table border="1" style="border-collapse: collapse; display: inline-table; margin-left:30px;margin-bottom:10px;">
+	<tr>
+	<td class="progdonation" style="border-bottom-style:none;"><text class="progtitle">Starter</text><br><text class="progsubtitle1">14 &euro;/month</text><br><text class="proggreen">ACQUAINTANCE</text></td>
+	</tr>
+	<tr>
+	<td class="progdonation" style="border-top-style:none;"><text class="progred">1 Super cool thingies</text><br><text class="progstuff">Free T-shirt</text><br><br><br><input class="button" type="submit" value="Choose"></td>
+	</tr>
+	</table>
+	
+	<table border="1" style="border-collapse: collapse; display: inline-table;margin-right:-5px;margin-left:-5px;margin-bottom:10px;">
+	<tr>
+	<td class="progdonation" style="border-bottom-style:none;"><text class="progtitle" style="font-size:37px;">Plus</text><br><text class="progsubtitle1"style="font-size:25px;">49 &euro;/month</text><br><text class="proggreen"style="font-size:18px;">SUPPORTER</text></td>
+	</tr>
+	<tr>
+	<td class="progdonation" style="border-top-style:none;"><text class="progred" style="font-size:22px;">3 Super cool thingies</text><br><text class="progstuff"style="font-size:20px;">Free T-shirt<br>2x Animal-Pattern Cup</text><br><br><input class="button" type="submit" value="Choose"></td>
+	</tr>
+	</table>
+	
+	<table border="1" style="border-collapse: collapse; display: inline-table;margin-bottom:10px;">
+	<tr>
+	<td class="progdonation" style="border-bottom-style:none;"><text class="progtitle">Premium</text><br><text class="progsubtitle1">99 &euro;/month</text><br><text class="proggreen">FRIEND</text></td>
+	</tr>
+	<tr>
+	<td class="progdonation" style="border-top-style:none;"><text class="progred">5 Super cool thingy</text><br><text class="progstuff">Free T-shirt<br>3x Animal-Pattern Cup<br>DVD Project-Documentary</text><br><input class="button" type="submit" value="Choose"></td>
+	</tr>
+	</table>
+	
+	
+	</td></tr>
 	</table>
 	</div>
 	
