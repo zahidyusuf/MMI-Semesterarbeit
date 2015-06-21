@@ -186,16 +186,61 @@
 		
 		var map = new google.maps.Map(mapCanvas, mapOptions);
 		
-		 var contentString = '<div id="content">'+
+		 var contentStringIndonesia = '<div id="content">'+
 	      '<div id="siteNotice">'+
 	      '</div>'+
 	      '<h1 id="firstHeading" class="firstHeading" style="font-family:Roboto Condensed;text-align:center">Indonesia</h1>'+
 	      '<div id="bodyContent">'+
-	      '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,' + 
-	      'when an unknown printer took a galley of type and scrambled it to make a type specimen book.' +
-	      'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>'+'<a href="#"><img id="donate_icon" src="icon/Get Closer button kopie.png"></a>'+'<a href="#"><img id="donate_icon" src="icon/Donate button 2.png"></a>'+
+	      '<p>Today, the last of Indonesias tigers now fewer than 400 are holding on for survival in the remaining patches of forests on the island of Sumatra.'+
+		  'Accelerating deforestation and rampant poaching mean this noble creature could end up like its extinct Javan and Balinese relatives.</p>' +
+	     '<a href="project-detail 1.html"><img id="donate_icon" src="icon/Get Closer button Kopie.png"></a>'+'<a href="#"><img id="donate_icon" src="icon/Donate button 2.png"></a>'+
 	      '</div>'+
 	      '</div>';
+	      
+	      var contentStringCongo = '<div id="content">'+
+	      '<div id="siteNotice">'+
+	      '</div>'+
+	      '<h1 id="firstHeading" class="firstHeading" style="font-family:Roboto Condensed;text-align:center">Congo</h1>'+
+	      '<div id="bodyContent">'+
+	      '<p>Gorillas display many human-like behaviors and emotions, such as laughter and sadness.' +
+			'They even make their own tools to help them survive in the forest. In fact, gorillas share 98.3% of their genetic code with humans, making them our closest cousins after chimpanzees and bonobos.</p>' +
+	     	'<a href="project-detail 2.html"><img id="donate_icon" src="icon/Get Closer button Kopie.png"></a>'+'<a href="#"><img id="donate_icon" src="icon/Donate button 2.png"></a>'+
+	      '</div>'+
+	      '</div>';
+	      
+
+	      var contentStringIndia = '<div id="content">'+
+	      '<div id="siteNotice">'+
+	      '</div>'+
+	      '<h1 id="firstHeading" class="firstHeading" style="font-family:Roboto Condensed;text-align:center">India</h1>'+
+	      '<div id="bodyContent">'+
+	      '<p>Elephants are an important cultural icon in Asia. '+
+			'According to Indian mythology, the gods (deva) and the demons (asura) churned the oceans in a search for the elixir of life so that they would become immortal. ' +
+		'As they did so, nine jewels surfaced, one of which was the elephant. In Hinduism, the powerful deity honored before all sacred rituals is the elephant-headed Lord Ganesha, ' +
+		'who is also called the Remover of Obstacles.</p>' +
+	     	'<a href="project-detail 3.html"><img id="donate_icon" src="icon/Get Closer button Kopie.png"></a>'+'<a href="#"><img id="donate_icon" src="icon/Donate button 2.png"></a>'+
+	      '</div>'+
+	      '</div>';
+	      
+	      var contentString = '<div id="content">'+
+	      '<div id="siteNotice">'+
+	      '</div>'+
+	      '<div id="bodyContent">'+
+	      '<img style="widht:260px;height:260px;" src="icon/under construction.jpg">' +
+	      '</div>'+
+	      '</div>';
+	      
+	      var infowindowIndonesia = new google.maps.InfoWindow({
+	    	  content: contentStringIndonesia
+	      });
+	      
+	      var infowindowCongo = new google.maps.InfoWindow({
+	    	  content: contentStringCongo
+	      });
+	      
+	      var infowindowIndia = new google.maps.InfoWindow({
+	    	  content: contentStringIndia
+	      });
 	      
 	      var infowindow = new google.maps.InfoWindow({
 	    	  content: contentString
@@ -224,7 +269,7 @@
 	 	
 	 	var marker2 = getMarker(1,map,image,projekt);
 	 	google.maps.event.addListener(marker2,'click',function() {
-	 	   	  infowindow.open(map,marker2);
+	 	   	  infowindowIndonesia.open(map,marker2);
 	 	});
 	 	
 		var marker3 = getMarker(2,map,image,projekt);
@@ -249,12 +294,12 @@
 	 	
 		var marker7 = getMarker(6,map,image,projekt);
 	 	google.maps.event.addListener(marker7,'click',function() {
-	 	   	  infowindow.open(map,marker7);
+	 	   	  infowindowIndia.open(map,marker7);
 	 	});
 	 	
 		var marker8 = getMarker(7,map,image,projekt);
 	 	google.maps.event.addListener(marker8,'click',function() {
-	 	   	  infowindow.open(map,marker8);
+	 	   	  infowindowCongo.open(map,marker8);
 	 	});
 	 	
 		var marker9 = getMarker(8,map,image,projekt);
