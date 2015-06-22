@@ -3,8 +3,7 @@
 html
 {
 	width: 1280px;
-	margin :0 auto;
-	
+	margin:0 auto;
 }
 
 /*
@@ -94,14 +93,101 @@ html
 	text-align: center;
 }
 
-#content h1
+
+.content
+{
+	margin-left:200px;
+}
+.content h1
+{
+	font-family: Roboto Condensed;
+	padding-left: 10px;
+}
+
+#sub_image
+{
+	width:290px;
+	height:274px;
+	margin-top:100px;
+	float:left;	
+}
+
+#sub_content 
+{
+	display:inline-block;
+	vertical-align:top;
+	margin-left:120px;
+	margin-top:60px;
+	
+}
+
+#par_sub_content
+{
+	display:inline-block;
+	margin-top:100px;
+}
+
+#par_sub_content h1
+{
+	padding-left:30px;
+	font-size: 36px;
+}
+
+#par_sub_content p
+{
+	padding-left:30px;
+
+}
+
+#sub_content a
+{
+	text-decoration:none;
+}
+
+
+#sub_content_image
+{
+	display:inline-block;
+	vertical-align:top;
+	margin-left:30px;
+	margin-top:10px;
+	
+}
+
+#par_sub_content_image
+{
+	display:inline-block;
+	font-size: 20px;
+	
+}
+
+#par_sub_content table
+{
+	margin-left:50px;
+	font-size: 36px;
+}
+
+/*
+	Table
+*/
+table
+{
+	  
+}
+
+table h2
 {
 	font-family: Roboto Condensed;
 	color: #ff9900;
-	margin-top:0 auto;
-	text-align: center;
-	font-size: 60px;
 }
+
+table h3
+{
+	font-family: Roboto Condensed;
+	
+}
+
+
 
 /*
 	Content 2
@@ -135,10 +221,12 @@ a
 }
 
 
+
+
+
 /*
 	Menu CSS
 */
-
 p
 {
 	font-family: Roboto Condensed;
@@ -216,9 +304,60 @@ body
 }
 
 /*
+	Map
+*/
+#map-canvas
+{
+	width: 1265px;
+	height: 600px;
+	
+}
+
+#map h2
+{
+	font-family:Quicksand;
+	text-align: center;
+	color: #de2c25;
+	font-size:32px;
+}
+#map h1
+{
+	font-family:Quicksand;
+	text-align: center;
+	color: #de2c25;
+	font-size:40px;
+}
+
+#map h3
+{
+	font-size:72px;
+	font-family:Quicksand;
+	color: #de2c25;
+	margin-bottom:-20px;
+	padding-left: 10px;
+	
+}
+
+#map h4
+{
+	font-size:20px;
+	font-family:Quicksand;
+	color: #de2c25;
+	margin-bottom:-20px;
+	padding-left: 10px;
+	
+}
+
+#map
+{
+	margin-top :200px;
+
+}
+
+
+/*
 	Social media
 */
-
 .socmed_icon 
 {
 	margin-left:430px;
@@ -258,7 +397,6 @@ body
 /*
 	Footer 
 */
-
 #footer
 {
 	background: #DCDCDC;
@@ -272,89 +410,4 @@ body
 		text-align:center;
 		padding-top:20px;
 }
-
-/*
-	Gallery
-*/
-
-::selection { background: #a4dcec; }
-::-moz-selection { background: #a4dcec; }
-::-webkit-selection { background: #a4dcec; }
-
-::-webkit-input-placeholder { /* WebKit browsers */
-  color: #ccc;
-  font-style: italic;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  color: #ccc;
-  font-style: italic;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-  color: #ccc;
-  font-style: italic;
-}
-:-ms-input-placeholder { /* Internet Explorer 10+ */
-  color: #ccc !important;
-  font-style: italic;  
-}
-
-br { display: block; line-height: 2.2em; } 
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
-ol, ul { list-style: none; }
-
-input, textarea { 
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  outline: none; 
-}
-
-blockquote, q { quotes: none; }
-blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
-strong { font-weight: bold; } 
-table { border-collapse: collapse; border-spacing: 0; }
-img { border: 0; max-width: 100%; }
-
-/** reset lightbox position **/
-#lightbox-container-image-data-box {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
-
-/** page structure **/
-#w {
-  display: block;
-  width: 1000px;
-  margin: 0 auto;
-  padding-top: 30px;
-  margin-left: 85px;
-  margin-top: 130px;
-}
-
-#content {
-  display: block;
-  width: 100%;
-  background: #eff0f0;
-  padding: 40px;
-  padding-left: 60px;
-  padding-bottom: 35px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-}
-
-#thumbnails { display: block; }
-#thumbnails ul li { float: left;margin-left:20px;margin-bottom: 20px;}
-
-/** clearfix **/
-.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
-.clearfix { display: inline-block; }
- 
-html[xmlns] .clearfix { display: block; }
-* html .clearfix { height: 1%; }
 
