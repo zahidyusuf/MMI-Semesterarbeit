@@ -30,11 +30,6 @@
 			<h1>
 				<img src="icon/home.png"style="width:52px;height:52px;margin-right: 15px;">Home
 			</h1>
-			<!-- 
-			<h3>
-				Our Mission is to build a future in which people live in harmony with nature.
-			</h3>
-			<!--  <a href="#"><img id="fb-logo" src="icon/fb-logo.png"></a> -->
 	</div>
 	
 	<div class="content">
@@ -98,28 +93,6 @@
 			Lets get closer to our animal protection project!
 		</h2>
 		<div id="map-canvas"></div>
-		<!--
-		<h3>
-			118
-		</h3>
-		<h4>
-			PROJECTS
-		</h4>
-		
-		<h3>
-			381.168
-		</h3>
-		<h4>
-			ANIMALS IMPACTED
-		</h4>
-		<h3>
-			134.546
-		</h3>
-		<h4>
-			DONATORS
-		</h4>
-		-->
-		
 	</div>
 	
 	<div class="content_2">
@@ -142,7 +115,7 @@
 		Stay in touch with updates and getting closer to our project
 		</p>
 		<a href="#"><img id="sign_in_icon" src="icon/Sign in button.png"></a>
-		<p>Not a member yet?<a href="#"> sign up</a> now!</p>
+		<p>Not a member yet?<a href="sign-up.html"> sign up</a> now!</p>
 	
 	
 	</div>
@@ -222,6 +195,21 @@
 	      '</div>'+
 	      '</div>';
 	      
+	  
+	      
+	      var contentStringMexico = '<div id="content">'+
+	      '<div id="siteNotice">'+
+	      '</div>'+
+	      '<h1 id="firstHeading" class="firstHeading" style="font-family:Roboto Condensed;text-align:center">Mexico</h1>'+
+	      '<div id="bodyContent">'+
+	      '<p>Vaquita, the worlds most rare marine mammal, is on the edge of extinction.'+
+			'This little porpoise wasnt discovered until 1958 and a little over half a century later, we are on the brink of losing them forever.<br><br>' +
+			'Vaquita are often caught and drowned in gillnets used by illegal fishing operations in marine protected areas within Mexicos Gulf of California. ' +
+			'More than half of the population has been lost in the last three years.</p>' +
+	     	'<a href="project-detail 4.html"><img id="donate_icon" src="icon/Get Closer button Kopie.png"></a>'+'<a href="#"><img id="donate_icon" src="icon/Donate button 2.png"></a>'+
+	      '</div>'+
+	      '</div>';
+	      
 	      var contentString = '<div id="content">'+
 	      '<div id="siteNotice">'+
 	      '</div>'+
@@ -242,6 +230,10 @@
 	    	  content: contentStringIndia
 	      });
 	      
+	      var infowindowMexico = new google.maps.InfoWindow({
+	    	  content: contentStringMexico
+	      });
+	      
 	      var infowindow = new google.maps.InfoWindow({
 	    	  content: contentString
 	      });
@@ -254,8 +246,8 @@
 	      ['China',34.639152, 100.796268],   
 	      ['Greece',37.877127, 23.810272],   
 	      ['India',19.648253, 78.340747],   
-	      ['Cameroon',7.042666, 13.399273],   
-	      ['Canada',56.098171, -109.007812],   
+	      ['Congo',-0.631077, 20.343811],   
+	      ['Mexico',26.626539, -110.645525],   
 	      ];
 	      
 	     var image = {
@@ -304,7 +296,7 @@
 	 	
 		var marker9 = getMarker(8,map,image,projekt);
 	 	google.maps.event.addListener(marker9,'click',function() {
-	 	   	  infowindow.open(map,marker9);
+	 	   	  infowindowMexico.open(map,marker9);
 	 	});
 	    
 	}

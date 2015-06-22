@@ -33,11 +33,6 @@ html
 
 }
 
-form
-{
-	font-family:Roboto Condensed;
-}
-
 #nav_icon
 {
 	widht:120px;
@@ -101,79 +96,32 @@ form
 .content h1
 {
 	font-family: Roboto Condensed;
-	padding-left: 10px;
+	padding-left: 20px;
+	text-align: center;
 }
+
+.content a
+{
+	text-decoration:none;
+
+}
+
+
 
 #sub_image
 {
 	width:290px;
 	height:274px;
-	margin-top:100px;
-	float:left;	
-}
-
-#sub_content 
-{
-	display:inline-block;
-	vertical-align:top;
-	margin-left:120px;
-	margin-top:60px;
+	margin-top:200px;
+	margin-left:483px;
 	
 }
 
-#par_sub_content
-{
-	display:inline-block;
-	margin-top:100px;
-}
-
-#par_sub_content h1
-{
-	padding-left:30px;
-}
-
-#par_sub_content p
-{
-	padding-left:30px;
-	font-size: 22px;
-}
 
 #sub_content a
 {
 	text-decoration:none;
 }
-
-/*
-	Content 2
-*/
-
-.content_2 h1
-{
-	margin-top:100px;
-	font-family: Roboto Condensed;
-	padding-left: 10px;
-	
-}
-
-#donate_icon
-{
-	widht:130px;
-	height:41px;
-	padding-left: 10px;
-}
-
-#sign_in_icon
-{
-	widht:130px;
-	height:41px;
-	padding-left: 10px;
-}
-
-a
-{
-	text-decoration:none;
-}
-
 
 /*
 	Menu CSS
@@ -182,7 +130,8 @@ p
 {
 	font-family: Roboto Condensed;
 	font-size: 20px;
-	padding-left: 10px;
+	text-align:center;
+
 }
 
 ul a
@@ -254,56 +203,6 @@ body
     padding:10px;
 }
 
-/*
-	Map
-*/
-#map-canvas
-{
-	width: 1265px;
-	height: 600px;
-	
-}
-
-#map h2
-{
-	font-family:Quicksand;
-	text-align: center;
-	color: #de2c25;
-	font-size:32px;
-}
-#map h1
-{
-	font-family:Quicksand;
-	text-align: center;
-	color: #de2c25;
-	font-size:40px;
-}
-
-#map h3
-{
-	font-size:72px;
-	font-family:Quicksand;
-	color: #de2c25;
-	margin-bottom:-20px;
-	padding-left: 10px;
-	
-}
-
-#map h4
-{
-	font-size:20px;
-	font-family:Quicksand;
-	color: #de2c25;
-	margin-bottom:-20px;
-	padding-left: 10px;
-	
-}
-
-#map
-{
-	margin-top :200px;
-
-}
 
 
 /*
@@ -361,4 +260,5 @@ body
 		text-align:center;
 		padding-top:20px;
 }
+
 

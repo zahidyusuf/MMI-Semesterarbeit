@@ -33,11 +33,6 @@ html
 
 }
 
-form
-{
-	font-family:Roboto Condensed;
-}
-
 #nav_icon
 {
 	widht:120px;
@@ -98,6 +93,11 @@ form
 	text-align: center;
 }
 
+
+.content
+{
+	margin-left:200px;
+}
 .content h1
 {
 	font-family: Roboto Condensed;
@@ -130,18 +130,64 @@ form
 #par_sub_content h1
 {
 	padding-left:30px;
+	font-size: 36px;
 }
 
 #par_sub_content p
 {
 	padding-left:30px;
-	font-size: 22px;
+
 }
 
 #sub_content a
 {
 	text-decoration:none;
 }
+
+
+#sub_content_image
+{
+	display:inline-block;
+	vertical-align:top;
+	margin-left:30px;
+	margin-top:10px;
+	
+}
+
+#par_sub_content_image
+{
+	display:inline-block;
+	font-size: 20px;
+	
+}
+
+#par_sub_content table
+{
+	margin-left:50px;
+	font-size: 36px;
+}
+
+/*
+	Table
+*/
+table
+{
+	  
+}
+
+table h2
+{
+	font-family: Roboto Condensed;
+	color: #ff9900;
+}
+
+table h3
+{
+	font-family: Roboto Condensed;
+	
+}
+
+
 
 /*
 	Content 2
@@ -173,6 +219,9 @@ a
 {
 	text-decoration:none;
 }
+
+
+
 
 
 /*

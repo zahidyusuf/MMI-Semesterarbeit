@@ -33,11 +33,6 @@ html
 
 }
 
-form
-{
-	font-family:Roboto Condensed;
-}
-
 #nav_icon
 {
 	widht:120px;
@@ -183,6 +178,12 @@ p
 	font-family: Roboto Condensed;
 	font-size: 20px;
 	padding-left: 10px;
+}
+
+#par_link
+{
+	font-size: 30px;
+	padding-left: 80px;
 }
 
 ul a
@@ -361,4 +362,13 @@ body
 		text-align:center;
 		padding-top:20px;
 }
+
+form
+{
+	font-family: Roboto Condensed;
+	margin-left:380px;
+	margin-top:100px;
+	margin-bottom:400px;
+}
+
 
