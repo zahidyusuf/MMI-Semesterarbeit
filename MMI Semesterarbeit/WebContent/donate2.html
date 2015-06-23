@@ -7,6 +7,20 @@
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quicksand">
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway">
 	<title>Yellow Bird - Donate</title>
+	<script>function parseURLParams() {
+		    var queryStart = window.location.href.indexOf("?") + 1,
+	        queryEnd   = window.location.href.indexOf("#") + 1 || window.location.href.length + 1,
+	        query = window.location.href.slice(queryStart, queryEnd - 1),
+	        v, nv;
+
+		    
+	    if (query === document.url || query === "") {
+	        return;
+	    }
+	        nv = query.split("=");
+	        v = decodeURIComponent(nv[1]);
+	        document.getElementById("amount").innerHTML = v + "&euro;";
+	}</script>
 		<style>
 	.titles{
 	font-size:33px; font-family:Roboto Condensed; margin-left:20px;
@@ -50,7 +64,7 @@
 	</style>
 	</head>
 
-	<body>
+	<body onLoad="parseURLParams()">
 	<div class="header">
 		<a id="menu" href="" class="menu_icon"><img id="menu_icon_img" src="icon/menu icon.png"></a>
 			<nav class="menu-side">
@@ -69,7 +83,7 @@
 	<div class="slider">
 			<img id="logo" src="image/logo.png">
 			<h1>
-				Yellow Bird - Donate
+				<img src="icon/heart.png"style="width:52px;height:52px;margin-right: 15px;">Donate
 			</h1>
 			<!-- 
 			<h3>
@@ -83,18 +97,16 @@
 	<div class="content">	
 <div id="sub_content">
 		<div id="par_sub_content">
-		<table border="1" style="border-collapse:collapse;margin-left:65px;">
-		<tr><td style="border-bottom-style:none;"><text class="titles">Make an anonymous donation</text></td></tr>
-		<tr><td>Amount: 			</td><td>			</td></tr>
-		<tr><td>E-mail: </td><td><input type="text"></td></tr>
-		<tr><td>Payment method:</td><td><img style="height:20px;" src="image/paypal_logo.png"></td></tr>
-		<tr><td>All fields with a * symbol must be filled</td></tr>
-		<tr><td><input type="submit" class="button" value="Donate"></td></tr>
+		<table border="1" style="border-collapse:collapse;margin-left:300px;">
+		<tr><td colspan="2"style="border-bottom-style:hidden;padding:20px;"><text class="titles">Make an anonymous donation</text></td></tr>
+		<tr><td style="border-right-style:hidden; border-bottom-style:hidden;"><p style="text-align:right;">Amount:</p></td><td style="border-top-style:none; border-bottom-style:none;text-align:left;"><p id="amount"></p></td></tr>
+		<tr><td style="border-bottom-style:hidden;border-right-style:hidden;"><p style="text-align:right;">E-mail: </p></td><td style="border-top-style:none; border-bottom-style:none;padding:25px;"><input type="text" style="width:150px;"></td></tr>
+		<tr><td style="border-right-style:hidden;border-bottom-style:hidden;"><p style="text-align:right;">Payment method:</p></td><td style="border-top-style:none; border-bottom-style:none;"> <img style="height:20px;padding:25px;" src="image/paypal_logo.png"></td></tr>
+		<tr><td style="border-right-style:hidden;"></td><td style="padding-bottom:15px;padding-right:15px;border-top-style:hidden;"><input type="submit" class="button" value="Donate" style="margin-left:150px;"onClick="window.location='donatebest.html'"></td></tr>
 	</table>
 	
 	
-	</td></tr>
-	</table>
+	
 	</div>
 	
 	</div>
