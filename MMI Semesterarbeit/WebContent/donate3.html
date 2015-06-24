@@ -7,7 +7,21 @@
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quicksand">
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway">
 	<title>Yellow Bird - Donate</title>
-	<style>
+	<script>function parseURLParams() {
+		    var queryStart = window.location.href.indexOf("?") + 1,
+	        queryEnd   = window.location.href.indexOf("#") + 1 || window.location.href.length + 1,
+	        query = window.location.href.slice(queryStart, queryEnd - 1),
+	        v, nv;
+
+		    
+	    if (query === document.url || query === "") {
+	        return;
+	    }
+	        nv = query.split("=");
+	        v = decodeURIComponent(nv[1]);
+	        document.getElementById("amount").innerHTML = v + " &euro;/month";
+	}</script>
+		<style>
 	.titles{
 	font-size:33px; font-family:Roboto Condensed; margin-left:20px;
 	}
@@ -50,7 +64,7 @@
 	</style>
 	</head>
 
-	<body>
+	<body onLoad="parseURLParams()">
 	<div class="header">
 		<a id="menu" href="" class="menu_icon"><img id="menu_icon_img" src="icon/menu icon.png"></a>
 			<nav class="menu-side">
@@ -81,63 +95,28 @@
 	
 	
 	<div class="content">	
-	<div id="sub_content">
+<div id="sub_content">
 		<div id="par_sub_content">
-		<table border="1" style="border-collapse:collapse;margin-left:65px;">
-		<tr><td style="border-bottom-style:none;"><text class="titles">Choose a country</text></td></tr>
-		<tr><td style="border-top-style:none;"> <select style="height:30px; font-size:15px;font-family:Roboto Condensed;margin-left:30px;margin-bottom:10px;">
-		<option value="Congo">Congo</option>
-		<option value="India">India</option>
- 		 <option value="Indonesia">Indonesia</option>
-  		<option value="Mexico" selected="selected">Mexico</option>
-  		
-				</select> </td>
-	<tr><td style="border-bottom-style:none;"><text class="titles">Make a one-time donation</text></td></tr>
-	<tr><td style="border-top-style:none;"><table border="1" style="border-collapse: collapse; margin-left:30px;margin-bottom:10px;margin-right:20px;"><tr>
-	<td class="onedonatetable"><form action="donate2.html" method="get"><text class="blacknumbers">5 </text><text class="orangeeuro">&euro;</text><br><input class="button" type="submit" value="Choose"><input type="hidden" name="amount" value="5"></form></td>
-	<td class="onedonatetable"><form action="donate2.html" method="get"><text class="blacknumbers">10 </text><text class="orangeeuro">&euro;</text><br><input class="button" type="submit" value="Choose"><input type="hidden" name="amount" value="5"></form></td>
-	<td class="onedonatetable"><form action="donate2.html" method="get"><text class="blacknumbers">50 </text><text class="orangeeuro">&euro;</text><br><input class="button" type="submit" value="Choose"><input type="hidden" name="amount" value="5"></form></td>
-	<td class="onedonatetable"><form action="donate2.html" method="get"><input type="text" name="amount" size="9"placeholder="Other"><text class="orangeeuro">&euro;</text><br><input class="button" type="submit"value="Choose"></form></td>
-	</tr></table></td></tr>
-	<tr><td style="border-bottom-style:none;"><text class="titles">or choose a program</text></td></tr>
-	<tr>
-	<td style="margin-left:20px;border-top-style:none;">
-	
-	
-	<table border="1" style="border-collapse: collapse; display: inline-table; margin-left:30px;margin-bottom:10px;">
-	<tr>
-	<td class="progdonation" style="border-bottom-style:none;"><text class="progtitle">Starter</text><br><text class="progsubtitle1">14 &euro;/month</text><br><text class="proggreen">ACQUAINTANCE</text></td>
-	</tr>
-	<tr>
-	<td class="progdonation" style="border-top-style:none;"><text class="progred">1 Super cool thingies</text><br><text class="progstuff">Free T-shirt</text><br><br><br><form action="donate3.html" method="get"><input class="button" type="submit" value="Choose"><input type="hidden" name="amount" value="14"></form></td>
-	</tr>
-	</table>
-	
-	<table border="1" style="border-collapse: collapse; display: inline-table;margin-right:-5px;margin-left:-5px;margin-bottom:10px;">
-	<tr>
-	<td class="progdonation" style="border-bottom-style:none;"><text class="progtitle" style="font-size:37px;">Plus</text><br><text class="progsubtitle1"style="font-size:25px;">49 &euro;/month</text><br><text class="proggreen"style="font-size:18px;">SUPPORTER</text></td>
-	</tr>
-	<tr>
-	<td class="progdonation" style="border-top-style:none;"><text class="progred" style="font-size:22px;">3 Super cool thingies</text><br><text class="progstuff"style="font-size:20px;">Free T-shirt<br>2x Animal-Pattern Cup</text><br><br><form action="donate3.html" method="get"><input class="button" type="submit" value="Choose"><input type="hidden" name="amount" value="49"></form></td>
-	</tr>
-	</table>
-	
-	<table border="1" style="border-collapse: collapse; display: inline-table;margin-bottom:10px;">
-	<tr>
-	<td class="progdonation" style="border-bottom-style:none;"><text class="progtitle">Premium</text><br><text class="progsubtitle1">99 &euro;/month</text><br><text class="proggreen">FRIEND</text></td>
-	</tr>
-	<tr>
-	<td class="progdonation" style="border-top-style:none;"><text class="progred">5 Super cool thingy</text><br><text class="progstuff">Free T-shirt<br>3x Animal-Pattern Cup<br>DVD Project-Documentary</text><br><form action="donate3.html" method="get"><input class="button" type="submit" value="Choose"><input type="hidden" name="amount" value="99"></form></td>
-	</tr>
+		<table border="1" style="border-collapse:collapse;margin-left:300px;">
+		<tr><td colspan="2"style="border-bottom-style:hidden;padding:20px;"><text class="titles">Monthly recurring donation</text></td></tr>
+		<tr><td style="border-right-style:hidden; border-bottom-style:hidden;"><p style="text-align:right;">Amount:</p></td><td style="border-top-style:none; border-bottom-style:none;text-align:left;"><p id="amount"></p></td></tr>
+		<tr><td style="border-bottom-style:hidden;border-right-style:hidden;"><p style="text-align:right;">E-mail: </p></td><td style="border-top-style:none; border-bottom-style:none;padding:25px;"><input type="text" style="width:150px;"></td></tr>
+		<tr><td style="border-right-style:hidden;border-bottom-style:hidden;"><p style="text-align:right;">Payment method:</p></td><td style="border-top-style:none; border-bottom-style:none;"> <img style="height:20px;padding:25px;" src="image/paypal_logo.png"></td></tr>
+		<tr><td style="border-right-style:hidden;"></td><td style="padding-bottom:15px;padding-right:15px;border-top-style:hidden;"><input type="submit" class="button" value="Donate" style="margin-left:150px;"onClick="window.location='donatebest.html'"></td></tr>
+		
 	</table>
 	
 	
-	</td></tr>
-	</table>
+	
 	</div>
 	
 	</div>
-		</div>
+
+
+
+	</div>
+	
+	
 	
 	<div class="socmed">
 		<h2>
