@@ -95,6 +95,10 @@
 		<div id="map-canvas"></div>
 	</div>
 	
+			
+
+
+	
 	<div class="content_2">
 		
 		<h1>
@@ -159,6 +163,16 @@
 		
 		var map = new google.maps.Map(mapCanvas, mapOptions);
 		
+		 	var legend = document.createElement('div');
+	        legend.id = 'legend';
+	        var content = [];
+	        content.push('<img src="icon/marker-red-map.png"/>Active Project');
+	        content.push('<img src="icon/marker-blau-map.png"/>Inactive Project');
+	        legend.innerHTML = content.join('');
+	        legend.index = 1;
+	        map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+		
+		
 		 var contentStringIndonesia = '<div id="content">'+
 	      '<div id="siteNotice">'+
 	      '</div>'+
@@ -166,7 +180,7 @@
 	      '<div id="bodyContent">'+
 	      '<p>Today, the last of Indonesias tigers now fewer than 400 are holding on for survival in the remaining patches of forests on the island of Sumatra.'+
 		  'Accelerating deforestation and rampant poaching mean this noble creature could end up like its extinct Javan and Balinese relatives.</p>' +
-	     '<a href="project-detail 1.html"><img id="donate_icon" src="icon/Get Closer button Kopie.png"></a>'+'<a href="#"><img id="donate_icon" src="icon/Donate button 2.png"></a>'+
+	     '<a href="project-detail 1.html"><img id="donate_icon" src="icon/Get Closer button Kopie.png"></a>'+'<a href="donateindonesia.html"><img id="donate_icon" src="icon/Donate button 2.png"></a>'+
 	      '</div>'+
 	      '</div>';
 	      
@@ -177,7 +191,7 @@
 	      '<div id="bodyContent">'+
 	      '<p>Gorillas display many human-like behaviors and emotions, such as laughter and sadness.' +
 			'They even make their own tools to help them survive in the forest. In fact, gorillas share 98.3% of their genetic code with humans, making them our closest cousins after chimpanzees and bonobos.</p>' +
-	     	'<a href="project-detail 2.html"><img id="donate_icon" src="icon/Get Closer button Kopie.png"></a>'+'<a href="#"><img id="donate_icon" src="icon/Donate button 2.png"></a>'+
+	     	'<a href="project-detail 2.html"><img id="donate_icon" src="icon/Get Closer button Kopie.png"></a>'+'<a href="donatecongo.html"><img id="donate_icon" src="icon/Donate button 2.png"></a>'+
 	      '</div>'+
 	      '</div>';
 	      
@@ -191,7 +205,7 @@
 			'According to Indian mythology, the gods (deva) and the demons (asura) churned the oceans in a search for the elixir of life so that they would become immortal. ' +
 		'As they did so, nine jewels surfaced, one of which was the elephant. In Hinduism, the powerful deity honored before all sacred rituals is the elephant-headed Lord Ganesha, ' +
 		'who is also called the Remover of Obstacles.</p>' +
-	     	'<a href="project-detail 3.html"><img id="donate_icon" src="icon/Get Closer button Kopie.png"></a>'+'<a href="#"><img id="donate_icon" src="icon/Donate button 2.png"></a>'+
+	     	'<a href="project-detail 3.html"><img id="donate_icon" src="icon/Get Closer button Kopie.png"></a>'+'<a href="donateindia.html"><img id="donate_icon" src="icon/Donate button 2.png"></a>'+
 	      '</div>'+
 	      '</div>';
 	      
@@ -250,54 +264,60 @@
 	      ['Mexico',26.626539, -110.645525],   
 	      ];
 	      
-	     var image = {
+	     var image1 = {
 	    	url:'icon/marker-red-map.png',
 	     };
 	     
-	    var marker1 = getMarker(0,map,image,projekt);
+	     var image2 = {
+	 	    	url:'icon/marker-blau-map.png',
+	 	 };
+	     
+	    var marker1 = getMarker(0,map,image2,projekt);
 	 	google.maps.event.addListener(marker1,'click',function() {
 	 	   	  infowindow.open(map,marker1);
 	 	});
 	 	
-	 	var marker2 = getMarker(1,map,image,projekt);
+	 	var marker2 = getMarker(1,map,image1,projekt);
 	 	google.maps.event.addListener(marker2,'click',function() {
 	 	   	  infowindowIndonesia.open(map,marker2);
 	 	});
 	 	
-		var marker3 = getMarker(2,map,image,projekt);
+		var marker3 = getMarker(2,map,image2,projekt);
 	 	google.maps.event.addListener(marker3,'click',function() {
 	 	   	  infowindow.open(map,marker3);
 	 	});
 	 	
-		var marker4 = getMarker(3,map,image,projekt);
+		var marker4 = getMarker(3,map,image2,projekt);
 	 	google.maps.event.addListener(marker4,'click',function() {
 	 	   	  infowindow.open(map,marker4);
 	 	});
 	 	
-		var marker5 = getMarker(4,map,image,projekt);
+		var marker5 = getMarker(4,map,image2,projekt);
 	 	google.maps.event.addListener(marker5,'click',function() {
 	 	   	  infowindow.open(map,marker5);
 	 	});
 	 	
-		var marker6 = getMarker(5,map,image,projekt);
+		var marker6 = getMarker(5,map,image2,projekt);
 	 	google.maps.event.addListener(marker6,'click',function() {
 	 	   	  infowindow.open(map,marker6);
 	 	});
 	 	
-		var marker7 = getMarker(6,map,image,projekt);
+		var marker7 = getMarker(6,map,image1,projekt);
 	 	google.maps.event.addListener(marker7,'click',function() {
 	 	   	  infowindowIndia.open(map,marker7);
 	 	});
 	 	
-		var marker8 = getMarker(7,map,image,projekt);
+		var marker8 = getMarker(7,map,image1,projekt);
 	 	google.maps.event.addListener(marker8,'click',function() {
 	 	   	  infowindowCongo.open(map,marker8);
 	 	});
 	 	
-		var marker9 = getMarker(8,map,image,projekt);
+		var marker9 = getMarker(8,map,image1,projekt);
 	 	google.maps.event.addListener(marker9,'click',function() {
 	 	   	  infowindowMexico.open(map,marker9);
 	 	});
+	 	
+	 	
 	    
 	}
    	
@@ -316,9 +336,9 @@
   
    	}
    	
-   	
+
   	google.maps.event.addDomListener(window, 'load', initialize);
-   	</script>
+    </script>
    	
    	<script>
     (function() {

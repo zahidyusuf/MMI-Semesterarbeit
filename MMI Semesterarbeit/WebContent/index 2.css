@@ -301,6 +301,21 @@ body
 
 }
 
+#legend
+{
+		background: #FFF;
+        padding: 10px;
+        margin: 10px;
+        font-size: 12px;
+        font-family: Arial, sans-serif;
+      
+}
+
+#legend h5
+{
+	font-family:Quicksand;
+	font-size: 14px;
+}
 
 /*
 	Social media
