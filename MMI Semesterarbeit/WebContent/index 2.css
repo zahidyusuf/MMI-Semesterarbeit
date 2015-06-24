@@ -320,6 +320,7 @@ body
 /*
 	Social media
 */
+
 .socmed_icon 
 {
 	margin-left:430px;
@@ -351,7 +352,7 @@ body
 
 .socmed h2
 {	
-	margin-top:300px;
+	margin-top:100px;
 	text-align:center;
 	font-family: Roboto Condensed;
 }
@@ -364,6 +365,7 @@ body
 	background: #DCDCDC;
 	width: 1280px;
 	height:50px;
+	
 }
 
 #footer_content

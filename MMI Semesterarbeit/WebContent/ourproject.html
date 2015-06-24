@@ -87,6 +87,17 @@
 		</div>
 		</div>
 	</div>
+	
+	<div id="map">
+		
+		<img id="nav_icon" src="icon/marker-red.png">
+		
+		<h2>
+			Lets get closer to our animal protection project!
+		</h2>
+		<div id="map-canvas"></div>
+	</div>
+	
 	<div class="socmed">
 		<h2>
 			Socialize with us on : 
@@ -106,7 +117,7 @@
 	</div>		 
 		
 
-	<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
    	<script>
    		function initialize(){
@@ -118,22 +129,87 @@
 		var mapOptions = {
 				zoom: 2,
 			    center: myLatlng,
-			    mapTypeId: google.maps.MapTypeId.TERRAIN,
-			    disableDefaultUI: true
+			    mapTypeId: google.maps.MapTypeId.SATELLITE,
+			    disableDefaultUI: false,
+			    scrollwheel: false
 		}
 		
 		var map = new google.maps.Map(mapCanvas, mapOptions);
 		
-		 var contentString = '<div id="content">'+
+		 var contentStringIndonesia = '<div id="content">'+
 	      '<div id="siteNotice">'+
 	      '</div>'+
 	      '<h1 id="firstHeading" class="firstHeading" style="font-family:Roboto Condensed;text-align:center">Indonesia</h1>'+
 	      '<div id="bodyContent">'+
-	      '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,' + 
-	      'when an unknown printer took a galley of type and scrambled it to make a type specimen book.' +
-	      'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>'+
+	      '<p>Today, the last of Indonesias tigers now fewer than 400 are holding on for survival in the remaining patches of forests on the island of Sumatra.'+
+		  'Accelerating deforestation and rampant poaching mean this noble creature could end up like its extinct Javan and Balinese relatives.</p>' +
+	     '<a href="project-detail 1.html"><img id="donate_icon" src="icon/Get Closer button Kopie.png"></a>'+'<a href="donateindonesia.html"><img id="donate_icon" src="icon/Donate button 2.png"></a>'+
 	      '</div>'+
 	      '</div>';
+	      
+	      var contentStringCongo = '<div id="content">'+
+	      '<div id="siteNotice">'+
+	      '</div>'+
+	      '<h1 id="firstHeading" class="firstHeading" style="font-family:Roboto Condensed;text-align:center">Congo</h1>'+
+	      '<div id="bodyContent">'+
+	      '<p>Gorillas display many human-like behaviors and emotions, such as laughter and sadness.' +
+			'They even make their own tools to help them survive in the forest. In fact, gorillas share 98.3% of their genetic code with humans, making them our closest cousins after chimpanzees and bonobos.</p>' +
+	     	'<a href="project-detail 2.html"><img id="donate_icon" src="icon/Get Closer button Kopie.png"></a>'+'<a href="donatecongo.html"><img id="donate_icon" src="icon/Donate button 2.png"></a>'+
+	      '</div>'+
+	      '</div>';
+	      
+
+	      var contentStringIndia = '<div id="content">'+
+	      '<div id="siteNotice">'+
+	      '</div>'+
+	      '<h1 id="firstHeading" class="firstHeading" style="font-family:Roboto Condensed;text-align:center">India</h1>'+
+	      '<div id="bodyContent">'+
+	      '<p>Elephants are an important cultural icon in Asia. '+
+			'According to Indian mythology, the gods (deva) and the demons (asura) churned the oceans in a search for the elixir of life so that they would become immortal. ' +
+		'As they did so, nine jewels surfaced, one of which was the elephant. In Hinduism, the powerful deity honored before all sacred rituals is the elephant-headed Lord Ganesha, ' +
+		'who is also called the Remover of Obstacles.</p>' +
+	     	'<a href="project-detail 3.html"><img id="donate_icon" src="icon/Get Closer button Kopie.png"></a>'+'<a href="donateindia.html"><img id="donate_icon" src="icon/Donate button 2.png"></a>'+
+	      '</div>'+
+	      '</div>';
+	      
+	  
+	      
+	      var contentStringMexico = '<div id="content">'+
+	      '<div id="siteNotice">'+
+	      '</div>'+
+	      '<h1 id="firstHeading" class="firstHeading" style="font-family:Roboto Condensed;text-align:center">Mexico</h1>'+
+	      '<div id="bodyContent">'+
+	      '<p>Vaquita, the worlds most rare marine mammal, is on the edge of extinction.'+
+			'This little porpoise wasnt discovered until 1958 and a little over half a century later, we are on the brink of losing them forever.<br><br>' +
+			'Vaquita are often caught and drowned in gillnets used by illegal fishing operations in marine protected areas within Mexicos Gulf of California. ' +
+			'More than half of the population has been lost in the last three years.</p>' +
+	     	'<a href="project-detail 4.html"><img id="donate_icon" src="icon/Get Closer button Kopie.png"></a>'+'<a href="donatemexico.html"><img id="donate_icon" src="icon/Donate button 2.png"></a>'+
+	      '</div>'+
+	      '</div>';
+	      
+	      var contentString = '<div id="content">'+
+	      '<div id="siteNotice">'+
+	      '</div>'+
+	      '<div id="bodyContent">'+
+	      '<img style="widht:260px;height:260px;" src="icon/under construction.jpg">' +
+	      '</div>'+
+	      '</div>';
+	      
+	      var infowindowIndonesia = new google.maps.InfoWindow({
+	    	  content: contentStringIndonesia
+	      });
+	      
+	      var infowindowCongo = new google.maps.InfoWindow({
+	    	  content: contentStringCongo
+	      });
+	      
+	      var infowindowIndia = new google.maps.InfoWindow({
+	    	  content: contentStringIndia
+	      });
+	      
+	      var infowindowMexico = new google.maps.InfoWindow({
+	    	  content: contentStringMexico
+	      });
 	      
 	      var infowindow = new google.maps.InfoWindow({
 	    	  content: contentString
@@ -147,8 +223,8 @@
 	      ['China',34.639152, 100.796268],   
 	      ['Greece',37.877127, 23.810272],   
 	      ['India',19.648253, 78.340747],   
-	      ['Cameroon',7.042666, 13.399273],   
-	      ['Canada',56.098171, -109.007812],   
+	      ['Congo',-0.631077, 20.343811],   
+	      ['Mexico',26.626539, -110.645525],   
 	      ];
 	      
 	     var image = {
@@ -162,7 +238,7 @@
 	 	
 	 	var marker2 = getMarker(1,map,image,projekt);
 	 	google.maps.event.addListener(marker2,'click',function() {
-	 	   	  infowindow.open(map,marker2);
+	 	   	  infowindowIndonesia.open(map,marker2);
 	 	});
 	 	
 		var marker3 = getMarker(2,map,image,projekt);
@@ -187,17 +263,17 @@
 	 	
 		var marker7 = getMarker(6,map,image,projekt);
 	 	google.maps.event.addListener(marker7,'click',function() {
-	 	   	  infowindow.open(map,marker7);
+	 	   	  infowindowIndia.open(map,marker7);
 	 	});
 	 	
 		var marker8 = getMarker(7,map,image,projekt);
 	 	google.maps.event.addListener(marker8,'click',function() {
-	 	   	  infowindow.open(map,marker8);
+	 	   	  infowindowCongo.open(map,marker8);
 	 	});
 	 	
 		var marker9 = getMarker(8,map,image,projekt);
 	 	google.maps.event.addListener(marker9,'click',function() {
-	 	   	  infowindow.open(map,marker9);
+	 	   	  infowindowMexico.open(map,marker9);
 	 	});
 	    
 	}
