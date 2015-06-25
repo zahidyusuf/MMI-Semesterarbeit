@@ -11,15 +11,19 @@
 		    var queryStart = window.location.href.indexOf("?") + 1,
 	        queryEnd   = window.location.href.indexOf("#") + 1 || window.location.href.length + 1,
 	        query = window.location.href.slice(queryStart, queryEnd - 1),
-	        v, nv;
+	        amount, values1, values2, values3, country;
 
 		    
 	    if (query === document.url || query === "") {
 	        return;
 	    }
-	        nv = query.split("=");
-	        v = decodeURIComponent(nv[1]);
-	        document.getElementById("amount").innerHTML = v + "&euro;";
+	    	values1 = query.split("&");
+	        values2 = values1[0].split("=");
+	        values3 = values1[1].split("=");
+	        amount = decodeURIComponent(values2[1]);
+	        country = decodeURIComponent(values3[1]);
+	        document.getElementById("amount").innerHTML = amount + "&euro;";
+	        document.getElementById("country").innerHTML = country;
 	}</script>
 		<style>
 	.titles{
@@ -98,11 +102,29 @@
 <div id="sub_content">
 		<div id="par_sub_content">
 		<table border="1" style="border-collapse:collapse;margin-left:300px;">
-		<tr><td colspan="2"style="border-bottom-style:hidden;padding:20px;"><text class="titles">Make a one-time donation</text></td></tr>
-		<tr><td style="border-right-style:hidden; border-bottom-style:hidden;"><p style="text-align:right;">Amount:</p></td><td style="border-top-style:none; border-bottom-style:none;text-align:left;"><p id="amount"></p></td></tr>
-		<tr><td style="border-bottom-style:hidden;border-right-style:hidden;"><p style="text-align:right;">E-mail: </p></td><td style="border-top-style:none; border-bottom-style:none;padding:25px;"><input type="text" style="width:150px;"></td></tr>
-		<tr><td style="border-right-style:hidden;border-bottom-style:hidden;"><p style="text-align:right;">Payment method:</p></td><td style="border-top-style:none; border-bottom-style:none;"> <img style="height:20px;padding:25px;" src="image/paypal_logo.png"></td></tr>
-		<tr><td style="border-right-style:hidden;"></td><td style="padding-bottom:15px;padding-right:15px;border-top-style:hidden;"><input type="submit" class="button" value="Donate" style="margin-left:150px;"onClick="window.location='donatebest.html'"></td></tr>
+		<tr>
+		<td colspan="2"style="border-bottom-style:hidden;padding:20px;"><text class="titles">Make a one-time donation</text></td>
+		</tr>
+		<tr>
+		<td style="border-right-style:hidden; border-bottom-style:hidden;"><p style="text-align:right;">Country:</p></td>
+		<td style="border-top-style:none; border-bottom-style:none;text-align:left;"><p id="country"></p></td>
+		</tr>
+		<tr>
+		<td style="border-right-style:hidden; border-bottom-style:hidden;"><p style="text-align:right;">Amount:</p></td>
+		<td style="border-top-style:none; border-bottom-style:none;text-align:left;"><p id="amount"></p></td>
+		</tr>
+		<tr>
+		<td style="border-bottom-style:hidden;border-right-style:hidden;"><p style="text-align:right;">E-mail: </p></td>
+		<td style="border-top-style:none; border-bottom-style:none;padding:25px;"><input type="text" style="width:150px;"></td>
+		</tr>
+		<tr>
+		<td style="border-right-style:hidden;border-bottom-style:hidden;"><p style="text-align:right;">Payment method:</p></td>
+		<td style="border-top-style:none; border-bottom-style:none;"> <img style="height:20px;padding:25px;" src="image/paypal_logo.png"></td>
+		</tr>
+		<tr>
+		<td style="border-right-style:hidden;"></td>
+		<td style="padding-bottom:15px;padding-right:15px;border-top-style:hidden;"><input type="submit" class="button" value="Donate" style="margin-left:150px;"onClick="window.location='donatebest.html'"></td>
+		</tr>
 		
 	</table>
 	
